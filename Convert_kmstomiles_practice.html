@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert KMS to MILES</title>
+    <script>
+        function convert(){
+            var kms = document.getElementById('data').value;
+            const factor = 0.62371;
+            var miles = factor * kms;
+            //document.getElementById('result').innerText = miles + " Miles"; 
+            document.getElementById('result').innerText = ` ${miles} Miles `;
+        }
+    </script>
+</head>
+<h1>Convert kms to miles practice</h1>
+<body>
+    <input type="number" step="any" id="data">  Kms
+    <button type="button" onclick="convert()" >Convert</button> Miles
+    <h1 id="result"></h1>
+    
+</body>
+</html>

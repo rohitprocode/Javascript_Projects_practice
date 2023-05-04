@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kg to litre</title>
+    <script>
+        function convert(){
+            var Kg = document.getElementById('inputdata').value;
+            const litre = 1.1;
+            var get = Kg * litre;
+            document.getElementById('result').innerText = `${get} Litre`;
+
+        }
+       
+    </script>
+</head><h1>Kg to litre</h1>
+<body>
+    <input type="number" name="" id="inputdata" placeholder="Type Litre" >
+    <button type="button" id="btn" onclick="convert()" > Press Here</button> 
+    <h1 id="result" ></h1>
+</body>
+</html>

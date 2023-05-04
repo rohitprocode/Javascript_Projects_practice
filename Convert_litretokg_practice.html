@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litre to Kg</title>
+    <script>
+        function litretokg(){
+            var litre = document.getElementById('inputdata').value;
+            const valueofkg = .910; //.900gms
+            var kg = litre * valueofkg;
+            document.getElementById('result').innerText = ` ${kg} kg`;  
+        }
+    </script>
+</head><h1>Litre to kg practice</h1>
+<body>
+    <input type="number" name="" id="inputdata" placeholder="Type to convert in Kg"> 
+    <button type="button" id="btn" onclick="litretokg()"> Press Here </button>
+    <h1 id="result" ></h1>
+</body>
+</html>

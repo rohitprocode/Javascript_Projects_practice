@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sign Checker</title>
+</head>
+<h1>Check Number Positive , Negative or NaN</h1>
+
+<body>
+
+    <input type="" id="inp" oninput="con()">
+    <h1 id="res"></h1>
+
+    <script>
+        function con() {
+            var a = document.getElementById('inp').value;
+            var b = Math.sign(a);
+            if (b ==1) {
+                document.getElementById('res').innerText=(`Positive No: ${a}`);
+            }
+            else if (b ==-1) {
+                document.getElementById('res').innerText=(`Negative No: ${a}`);
+            } else if (b==0) {
+                document.getElementById('res').innerText=(`Its a Zero Bro! ${a}`);
+            }
+            else{
+        document.getElementById('res').innerText=(`${a} Not a Number `);
+            }
+        };
+    </script>
+
+</body>
+
+</html>

@@ -11,6 +11,7 @@
 
 <body>
 
+    <h4>1st Method:-</h4>
     <input type="" id="inp" oninput="con()">
     <h1 id="res"></h1>
 
@@ -18,18 +19,38 @@
         function con() {
             var a = document.getElementById('inp').value;
             var b = Math.sign(a);
-            if (b ==1) {
-                document.getElementById('res').innerText=(`Positive No: ${a}`);
+            if (b == 1) {
+                document.getElementById('res').innerText = (`Positive No: ${a}`);
             }
-            else if (b ==-1) {
-                document.getElementById('res').innerText=(`Negative No: ${a}`);
-            } else if (b==0) {
-                document.getElementById('res').innerText=(`Its a Zero Bro! ${a}`);
+            else if (b == -1) {
+                document.getElementById('res').innerText = (`Negative No: ${a}`);
+            } else if (b == 0) {
+                document.getElementById('res').innerText = (`Its a Zero Bro! ${a}`);
             }
-            else{
-        document.getElementById('res').innerText=(`${a} Not a Number `);
+            else {
+                document.getElementById('res').innerText = (`${a} Not a Number `);
             }
         };
+    </script>
+    <h4>2nd Method:-</h4>
+
+    <input type="number" id="inpu" oninput="conv()">
+    <h1 id="look"></h1>
+
+    <script>
+        function conv() {
+            var x = document.getElementById('inpu').value;
+            var b = Math.sign(x);
+            console.log(b);
+            if (b > 0) {
+                document.getElementById('look').innerText = (`Positive Number ${x}`);
+            } else if (b < 0) {
+                document.getElementById('look').innerText = (`Negative Number ${x}`);
+            } else if (b == 0){
+                document.getElementById('look').innerText = (`Its a Zero ${b}`);
+            }
+        }
+
     </script>
 
 </body>

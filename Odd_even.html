@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="inpu" >
+    <button type="submit" id="btn" onclick="oeven()">Click Me</button>
+    <h1 id="outpu"></h1>
+
+    <script>
+        function oeven(){
+        var a = document.getElementById('inpu').value;
+        if(a%2==0){
+            document.getElementById('outpu').innerText = "Even";
+        }else{
+            document.getElementById('outpu').innerText = "Odd";
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Random Number</title>
+</head><h1>Generate Random Number</h1>
+<body>
+    <h1 id="987" ></h1>
+    <h1 id="123" ></h1>
+    <script>
+        var x = Math.random();
+        var y = Math.random();
+        console.log("Default Random No: " + x);
+    /* Formula for get random no as our numbers 
+        Math.random*(Highest Number - Lowest Number) + Lowest Number;
+    */ 
+        x = x*(1000000-1000)+1000;
+        console.log("Numbers b/w 1000-1000000" + x );
+
+        //If we want integer number then we should write
+
+        console.log("Number without decimal : " + Math.floor(x));
+        document.getElementById('987').innerText = "Number without decimal : " + Math.floor(x);
+        //If we want to get exact 4 random numbers then we should write:-
+        console.log("Exact 4 digits " + Math.floor((y*(9999-1000)+1000)));
+        document.getElementById('123').innerText = "Exact 4 digits " + Math.floor((y*(9999-1000)+1000))
+    </script>
+</body>
+</html>

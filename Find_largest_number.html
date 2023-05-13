@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Largest Number</title>
-</head><h1>Find Largest Number</h1>
+</head>
+<h1>Find Largest Number</h1>
+
 <body>
-    <input type="number" id="inp1" placeholder="First Number" >
+    <h2>With the use of Math.max</h2>
+    <input type="number" id="inp1" placeholder="First Number">
     <input type="number" id="inp2" placeholder="Second Number">
     <input type="number" id="inp3" placeholder="Third Number">
     <button type="button" id="btn" onclick="large()">Submit</button>
-    <h1 id="result" ></h1>
+    <h1 id="result"></h1>
     <script>
-        function large(){
-        var a = document.getElementById('inp1').value;
-        var b = document.getElementById('inp2').value;
-        var c = document.getElementById('inp3').value;
-        var x = Math.max(a,b,c);
-        document.getElementById('result').innerText = `Largest no b/w ${a} , ${b} , ${c} = ${x}`;
+        function large() {
+            var a = document.getElementById('inp1').value;
+            var b = document.getElementById('inp2').value;
+            var c = document.getElementById('inp3').value;
+            var x = Math.max(a, b, c);
+            document.getElementById('result').innerText = `Largest no b/w ${a} , ${b} , ${c} = ${x}`;
         }
     </script>
+    <h2>Without Math.max</h2>
+    <input type="number" id="inp4" placeholder="First Number">
+    <input type="number" id="inp5" placeholder="Second Number">
+    <input type="number" id="inp6" placeholder="Third Number">
+    <button type="button" id="btn2" onclick="largest()">Submit</button>
+    <h1 id="Output"></h1>
+
+    <script>
+        var A = document.getElementById('inp4').value;
+        var B = document.getElementById('inp5').value;
+        var C = document.getElementById('inp6').value;
+        function largest(P,Q,R) {
+            if(P>=Q && P>=R){
+                document.getElementById('Output').innerText = `${P} is a Largest Number `;
+            }else if(Q>=P && Q>=R){
+                document.getElementById('Output').innerText = `${Q} is a Largest Number`;   
+            }else{
+                document.getElementById('Output').innerText = `${R} is a Largest Number`;
+            }
+        }
+        largest(A,B,C);
+            
+    </script>
 </body>
+
 </html>

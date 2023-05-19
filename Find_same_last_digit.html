@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Same Last Digit</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt("Enter First Number");
+        var b = prompt("Enter Second Number");
+        var c = prompt("Enter Third Number");
+
+        var tempa = a;
+        var tempb = b;
+        var tempc = c;
+
+        var noOfDigitsa = a.toString().length;
+        var noOfDigitsb = b.toString().length;
+        var noOfDigitsc = c.toString().length;
+        
+        function same() {
+            var x = tempa % 10;
+            
+            var y = tempb % 10;
+            
+            var z = tempc % 10;
+
+            if((x==y)&&(x==z)){
+                console.log(`${a} ${b} ${c} haven same last digits`);
+            } else if((x==y)&&(x!=z)){
+                console.log(`${a} ${b} have same last digits`);
+            } else if((y==x)&&(y!=z)){
+                console.log(`${a} ${c} have same last digits`);
+            } else if((y==z)&&(x!=z)){
+                console.log(`${b} ${c} have same last digits`);
+            } else{
+                console.log(`${a} ${b} ${c} haven't same last digits`);
+            }
+
+        }
+        same();
+    </script>
+
+</body>
+
+</html>

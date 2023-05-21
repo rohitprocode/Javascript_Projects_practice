@@ -21,6 +21,21 @@
         else{
             console.log(`It is not a palindrome`);
         }
+
+        function Palindrome(x){
+            var j = x;
+            x = x.split('');
+            x = x.reverse();
+            x = x.join('');
+            
+            if(j==x){
+                console.log(` ${j} is a Palindrome Word.`);
+            }else{
+                console.log(` ${j} is not a Palindrome word.`);
+            }
+            
+        }
+        Palindrome(prompt(`Please enter a word`));
     </script>
 
 </body>

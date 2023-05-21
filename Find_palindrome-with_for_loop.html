@@ -9,16 +9,17 @@
 <body>
     <h1>Find Palindrome with forLoop</h1>
     <script>
-        var a = prompt("Please Enter a word");
-        var b = a.length;
-        var msg = "It is a Palindrome"
-
-        for(var i = 0; i < b/2; i++){
-            if(a[i] !=  a[b - 1 - i]){
-                msg = "It is not a Palindrome";
-            }
+        function Palindromeloop(x){
+            var b = x.length;
+            var Output2 = "This is a Palindrome Word";
+            for(var i =0; i<b/2 ; i++){
+                if(x[i]!=x[b-1-i]){
+                    return console.log("It is not a Palindrome Word");
+                }
+           }
+           console.log(`${x} : ${Output2}`);
         }
-        console.log(`${a} : ${msg}`);
+        Palindromeloop(prompt("Please Enter a Word"));
     </script>
 </body>
 </html>

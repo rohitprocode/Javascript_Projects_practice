@@ -9,17 +9,18 @@
 <body>
     <h1>Find Palindrome Strings</h>
     <script>
-        var x = prompt("Enter Text");
-        var a = x.split('');
-        var b = a.reverse();
-        var c = b.join('');
-        if(x==c){
-            console.log(` ${x} is a Palindrome `);
-        }else{
-            console.log(` ${x} is not a Palindrome`);
+        var a = prompt("Please Enter any Word");
+        var b = a.split('');
+        var c = b.reverse();
+        var d = c.join('');
+        console.log(d);
+
+        if(d == a){
+            console.log(`It is a palindrome`);
         }
-
-
+        else{
+            console.log(`It is not a palindrome`);
+        }
     </script>
 
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Start End Word</title>
+</head>
+<body>
+    <h1>Check Start End Word</h1>
+    <script>
+        var a = prompt("Please Enter a word");
+        var x = a.startsWith('M');
+        var y = a.endsWith('e');
+        if((x==true)&&(y==true)){
+            console.log(`${a} starts with M , ends with 'e'`);
+        }else if((x==true)&&(y!=true)){
+            console.log(`${a} starts with M , not ends with 'e'`);
+        }else if((x!=true)&&(y==true)){
+            console.log(`${a} not starts with M , but ends with 'e'`);
+        }else{
+            console.log(`${a} not starts with M , nor ends with 'e'`);
+        }
+
+
+    </script>
+</body>
+</html>

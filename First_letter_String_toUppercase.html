@@ -21,14 +21,15 @@
         var b = a.split('');
         var c;
         var d;
+        var e;
         for(var i = 0 ; i < a.length; i++){
             if(i == 0){
                 c = b[0].toUpperCase();
                 d = b.shift();
+                e = b.join('');    
             } 
-            
         }
-        console.log(c+d);
+        console.log(c+e);
     </script>
     
 </body>

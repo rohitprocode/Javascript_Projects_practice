@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+<body>
+    <h1>Find Armstrong Number between Interval</h1>
+    <script>
+
+        var a = prompt("Please enter lower number");
+        var b = prompt("Please enter upper number");
+
+        for(var i = a; i <= b; i++){
+            var temp = i;  //preserve the value of i
+            var noOfDigits = i.toString().length;
+            var sum = 0;
+            while(temp > 0){
+                var c = temp % 10;
+                temp = parseInt(temp/10);
+                sum = sum + c**noOfDigits;
+            }
+
+            if(sum == i){
+                console.log(` ${i} is an Armstrong Number`);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var a = prompt("Please enter a number");
+        // var number = a;
+        // var noOfDigits = a.toString().length;
+        // var sum = 0;
+        // while( number > 0){
+        //     var c = number%10;
+        //     sum = sum + c ** noOfDigits;
+        //     number = parseInt(number/10);
+        // }
+
+        // if (sum == a) {
+        //     console.log(` ${a} is an Armstrong Number`);
+        // } else {
+        //     console.log(`${a} is not an Armstrong Number`);
+        // }
+
+    </script>
+</body>
+</html>

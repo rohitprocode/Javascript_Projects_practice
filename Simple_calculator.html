@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body style="background-color: darkslategray" >
+    <h1 style="color:white">Simple Calculator</h1>
+    <script>
+
+        var FirstNum = Number(prompt(`Please enter first number`));
+
+        var calc_symbol = prompt("Please enter symbol what you do with numbers, Add (+) , Subs (-) , Multiply (*) , Divide (/) ");
+
+        var SecondNum = Number(prompt("Please enter Second Number"));
+
+        switch (calc_symbol) {
+
+            case '+':
+                console.log(FirstNum + SecondNum);
+                break;
+        
+            case '-':
+                console.log(FirstNum - SecondNum);
+                break;
+            
+            case '*':
+                console.log(FirstNum * SecondNum);
+                break;
+            
+            case '/':
+                console.log(FirstNum / SecondNum);
+                break;
+            
+            default:
+                console.log("Please enter valid operator symbol");
+                break;
+            
+        }
+        
+
+    </script>
+</body>
+</html>

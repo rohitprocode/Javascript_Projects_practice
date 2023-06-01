@@ -9,9 +9,16 @@
 <body>
     <h1>Replace character, word, letter of a string</h1>
     <script>
-        var a = prompt("Please enter a word");
+        var a = 'Rohit';
         console.log(a.replace('R','M'));
-    
+        
+        //with the use of RegEx
+        var b = 'I have a blue shirt and blue pant';
+        console.log(b);
+        var RegEx = RegExp('Blue','gi');
+        console.log(b.replace(RegEx,'Green'));
+        
+        
     </script>
 </body>
 </html>

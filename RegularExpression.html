@@ -28,7 +28,14 @@
 
         //use replace()
         let check2 = a.replace('Rohit','Mohit');
-        document.getElementById('demo2').innerHTML = check2;    
+        document.getElementById('demo2').innerHTML = check2; 
+        
+        //With Regular Expression
+        let check3 = a.replace(/mohit/i,'Rohit');
+        document.getElementById('demo2').innerHTML = check3; 
+
+        let check4 = a.replace(/and/i,'&');
+        document.getElementById('demo2').innerHTML = check4;
 
 
 

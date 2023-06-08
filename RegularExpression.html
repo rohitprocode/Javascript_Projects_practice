@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+<body style="margin:0; background-color: grey; color: white;">
+    <h1>Regular Expression</h1>
+    <h2>Syntax:</h2>
+    <pre style="font-size: 25px; background-color: black; color:aliceblue; text-align: center;">/pattern/modifiers;</pre>
+
+    <p id="demo" style="text-align: center;"></p>
+
+    <p id="demo2" style="background-color: black; text-align: center;"></p>
+
+    <script>
+
+        let a = " My Name is Rohit Rathore and i will get a job before 2024 ";
+        document.getElementById('demo').innerHTML = a;
+
+        //use search()
+        let check1 = a.search('Rathore'); 
+        document.getElementById('demo2').innerHTML = check1;
+
+        //use replace()
+        let check2 = a.replace('Rohit','Mohit');
+        document.getElementById('demo2').innerHTML = check2;    
+
+
+
+    </script>
+
+</body>
+
+</html>

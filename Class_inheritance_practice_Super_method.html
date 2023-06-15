@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance Practice Super Method</title>
+</head>
+
+<body>
+    <h1>Class Inheritance Practice Super Method</h1>
+    <script>
+        class Father {
+            constructor() {
+                this.father = "This is self Father instance Member.";
+            }
+            ShowFmoney() {
+                return "Father Money.";               // This is prototype member of Father 
+            }
+        }
+
+        class Son extends Father {
+            ShowSmoney() {
+                return "Son Money.";
+            }
+        }
+        var s = new Son();
+        document.write(s.father + "<br/>")
+        document.write(s.ShowSmoney() + "<br/>");
+        document.write(s.ShowFmoney() + "<br/><br/>");  //Accessing Father Money.......
+
+
+        class Grandson extends Son {
+            constructor(){
+                super();
+                this.grandSon = "This is Grandson instance Member.";
+            }
+            
+            ShowGrandSon() {
+                return "This is Grand Son prototype Member.";
+            }
+        }
+
+        var GS = new Grandson();
+        document.write(GS.grandSon + "<br/>");
+        document.write(GS.ShowGrandSon() + "<br/>");
+        document.write(GS.ShowSmoney() + "<br/>");
+        document.write(GS.ShowFmoney() + "<br/>");
+        document.write(GS.father + "<br/>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_program</title>
+</head>
+<body>
+    <h1>Practice Program</h1>
+    <h2>Questions:</h2>
+    <p>Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.</p>
+    <input type="number" placeholder="Enter Number" id="inpu">
+    <button id="Submit" onclick="checking()" >Submit</button>
+    <p id="result"></p>
+    <script>
+
+        function checking(){
+        var num = document.getElementById('inpu').value;
+        if((num >= 20)&&(num <= 100)){
+            document.getElementById('result').innerHTML = ` Number : ${num} in between 20 - 100`;
+        }
+        else if(num == 400){
+            document.getElementById('result').innerHTML = ` Number is ${num} `;
+        }else{
+            document.getElementById('result').innerHTML = ` Input number is neither between 20-100 nor 400 `;
+        }
+    }
+    </script>
+</body>
+</html>

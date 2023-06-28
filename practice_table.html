@@ -7,19 +7,18 @@
 </head>
 <body>
     <h1> Print a table containing multiplication tables</h1>
+    <input type="number" id="inp" placeholder="Enter any Number" >
+    <button id="btn" onclick="multi()">Click Here</button>
     <script>
-
         function multi(){
-            let a = 2;
+            let a = document.getElementById('inp').value;
             let b = 0;
-
             for(let i = 1; i <= 10; i++){
                 b = i * a;
-                console.log(b);
+                document.write(` ${a} x ${i} = ${b} </br> `);
             }
-        }
-        multi();
 
+        };
     </script>
 </body>
 </html>

@@ -77,7 +77,7 @@
     <!-- </script> -->
 
 
-    <script>
+    <!-- <script>
 
         // tail starts here
         var library = [
@@ -117,6 +117,38 @@
         sortLibrary();
 
         
+    </script> -->
+
+    <script>
+
+        // tail starts here
+        var library = [
+            {
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                libraryID: 1254
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                libraryID: 4264
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                libraryID: 3245
+            }
+        ];
+
+        function sortLibrary() {
+            // var library is defined, use it in your code
+            // use console.log(library) to output the sorted library data
+            library.sort(function (tit1, tit2) {
+                return console.log(tit1.title.localeCompare(tit2.title));
+            })
+        }
+
+        sortLibrary();
     </script>
 </body>
 

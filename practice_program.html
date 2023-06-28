@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice_program</title>
 </head>
+
 <body>
     <h1>Practice Program</h1>
     <h2>Questions:</h2>
-    <p>Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.</p>
+
+    <!-- <p>Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.</p>
     <input type="number" placeholder="Enter Number" id="inpu">
     <button id="Submit" onclick="checking()" >Submit</button>
     <p id="result"></p>
@@ -25,6 +28,53 @@
             document.getElementById('result').innerHTML = ` Input number is neither between 20-100 nor 400 `;
         }
     }
+    </script> -->
+
+    <script>
+
+        // tail starts here
+        var library = [
+            {
+                title: 'Bill Gates',
+                author: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                title: 'Steve Jobs',
+                author: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                readingStatus: false
+            }
+        ];
+
+        // console.log(library[0].readingStatus)
+        // console.log(library[0].title);
+        // console.log(library[1].title)
+
+        // If the book is unread:
+
+        // You still need to read '<book_name>' by < author_name >.
+        // If the book is read:
+
+        // Already read '<book_name>' by < author_name >.
+
+        function displayInformation() {
+            // var library is defined, use it to print the information
+            for(let i = 0; i < library.length; i++){
+            if (library[i].readingStatus == false) {
+                document.write(`You still need to read '${library[i].title}' by ${library[i].author}.`);
+            } else {
+                document.write(`Already read '${library[i].title}' by ${library[i].author}.`);   
+            }
+        }
+    }
+
+            displayInformation();
     </script>
 </body>
+
 </html>

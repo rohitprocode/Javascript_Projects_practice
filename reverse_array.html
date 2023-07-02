@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <h1>Reverse Array</h1>
+    <script>
+        let Array1 = [10,80,30,75,99];
+        let j = 1;
+        let position = Array1.length;
+        for(let i = 0 ; i < position-j; i++){
+            let store = Array1[i];
+            Array1[i] = Array1[position-j];
+            Array1[position-j] = store;
+            j++;
+        }
+        console.log(Array1);
+
+    </script>
+</body>
+</html>

@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KM to miles</title>
 </head>
-<body style="display: flex; align-items: center; justify-content: center; margin: auto; padding: auto; height: 100vh; background-color: black; color: white;">
-    <p><input type="number" id="inpu" placeholder="Enter a number" > Km to miles </p>
-    <button id="btn" style='margin: 5vh; width: 5vw; height: 3vh; border-radius: 11%;' >Convert</button>
+<body >
+    <p><input type="number" id="inpu" placeholder="Enter a number"> Km to miles </p>
+    <p id="disp"></p>
+    <button id="btn" onclick="convert()">Convert</button>
+    
+    <script>
+        function convert(){
+        let a = document.getElementById('inpu').value;
+        let result;
+        result = a *  0.62137119;
+        document.getElementById('disp').innerHTML = result;
+    }
+    </script>
 </body>
 </html>

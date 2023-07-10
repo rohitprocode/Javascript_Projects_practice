@@ -199,13 +199,26 @@
     <script>
 
         /* A class have 10 students.In the annual exam 
-        Rohit got first Rank and Rakesh and Aman both got 2nd rank and Himanshu got 3rd rank and Nirmal 4th, Vishwajeet 5th, Sachin 6th, Dipak 7th, Nagesh 8th, Harsh 9th, Pravin 10th also passed.
+        Rohit got first Rank and Vishwajeet got 2nd rank and Himanshu got 3rd rank and Nirmal 4th, Rakesh 5th, Sachin 6th, Dipak 7th, Nagesh 8th, Harsh 9th, Pravin 10th also passed.
         Total Marks is 600 and above 250 marks all students will pass.
         */
 
-        
+        let Class_Room = class {
+            constructor(Rank1,Rank2,Rank3,Rank4,Rank5,Rank6,Rank7,Rank8,Rank9,Rank10){
+                this.Rank1 = Rank1;
+                this.Rank2 = Rank2;
+                this.Rank3 = Rank3;
+                this.Rank4 = Rank4;
+                this.Rank5 = Rank5;
+                this.Rank6 = Rank6;
+                this.Rank7 = Rank7;
+                this.Rank8 = Rank8;
+                this.Rank9 = Rank9;
+                this.Rank10 = Rank10;
+            }
+        }
 
-
+        let Class_10th = new Class_Room("Rohit","Vishwajeet","Himanshu","Nirmal","Rakesh","Sachin","Dipak","Nagesh","Harsh","Pravin");
     </script>
 </body>
 

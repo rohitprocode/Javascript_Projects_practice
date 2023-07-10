@@ -167,7 +167,7 @@
         var a = 9; // Declaration hoisted to the top but initialization is not
         console.log(a)
     </script> -->
-    <script>
+    <!-- <script>
         let data = 'size';
 
         var a1 = {
@@ -179,6 +179,21 @@
         console.log(a1.size);
         console.log(a1["size"]);
         
+    </script> -->
+    <script>
+        let arr = [864,486,548,321,123,789,933,470];
+        let swap;
+
+        for(let i = 0; i < arr.length; i++){
+            for(let j = i; j < arr.length; j++){
+                if(arr[i] > arr[j]){
+                    swap = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = swap;
+                }
+            }
+        }
+        console.log(arr);
     </script>
 </body>
 

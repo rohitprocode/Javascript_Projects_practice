@@ -9,22 +9,27 @@
     <script>
         
     let arr1 = [84,84,868,7784,75,15,354,878];
-    console.log(arr1);
-    let arr2 = [-54-5485-2-115-844-31-15-97-54];
+    let arr2 = [-54,-5485,-2,-115,-844,-31,-15,-97,-54];
     let arr3 = [15.51,89.48,5.49,31.66,78.94,12.135,0.55,1.55];
 
-    let swap;
-
-    for(let i = 0; i < arr1.length; i++){
-        for(let j = 0; j < arr1.length; j++){
-            if(arr1[i]>arr1[j]){
-            swap = arr1[i];
-            arr1[i] = arr1[j];
-            arr1[j] = swap;
+    function Arrange_in_descending(a){
+        for(let i = 0; i < a.length; i++){
+        for(let j = 0; j < a.length; j++){
+            if(a[i]>a[j]){
+            let swap;
+            swap = a[i];
+            a[i] = a[j];
+            a[j] = swap;
         }
         }
-        console.log(arr1)
     }
+    return console.log(a);
+    }
+
+    Arrange_in_descending(arr1);
+    Arrange_in_descending(arr2);
+    Arrange_in_descending(arr3);
+    
     
     
 </script>

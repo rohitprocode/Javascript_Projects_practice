@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        
+        //Descending
     let arr1 = [84,84,868,7784,75,15,354,878];
     let arr2 = [-54,-5485,-2,-115,-844,-31,-15,-97,-54];
     let arr3 = [15.51,89.48,5.49,31.66,78.94,12.135,0.55,1.55];
@@ -30,7 +30,27 @@
     Arrange_in_descending(arr2);
     Arrange_in_descending(arr3);
     
+    //Ascending
+    let arr4 = [84,84,868,7784,75,15,354,878];
+    let arr5 = [-54,-5485,-2,-115,-844,-31,-15,-97,-54];
+    let arr6 = [15.51,89.48,5.49,31.66,78.94,12.135,0.55,1.55];
     
+    function Arrange_in_ascending(a){
+        for(let i = 0; i < a.length; i++){
+            for(let j = 0; j < a.length; j++){
+                if(a[i] < a[j]){
+                    swap = a[i];
+                    a[i] = a[j];
+                    a[j] = swap;
+                }
+            }
+        }
+        return console.log(a);
+    }
+
+    Arrange_in_ascending(arr4);
+    Arrange_in_ascending(arr5);
+    Arrange_in_ascending(arr6);
     
 </script>
 </body>

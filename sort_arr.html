@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array</title>
+</head>
+<body>
+    <script>
+        
+    let arr1 = [84,84,868,7784,75,15,354,878];
+    console.log(arr1);
+    let arr2 = [-54-5485-2-115-844-31-15-97-54];
+    let arr3 = [15.51,89.48,5.49,31.66,78.94,12.135,0.55,1.55];
+
+    let swap;
+
+    for(let i = 0; i < arr1.length; i++){
+        for(let j = 0; j < arr1.length; j++){
+            if(arr1[i]>arr1[j]){
+            swap = arr1[i];
+            arr1[i] = arr1[j];
+            arr1[j] = swap;
+        }
+        }
+        console.log(arr1)
+    }
+    
+    
+</script>
+</body>
+</html>

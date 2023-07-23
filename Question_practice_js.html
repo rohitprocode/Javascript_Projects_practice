@@ -10,9 +10,11 @@
     <script>
         let num = 5 + "5" - 5;
 
-        console.log(num + "</br>");  
+        console.log(num);  //50
+        //Output = 50 because here type coersion play role.
+        //first 5 + "5" = number + string eg. Rohit + ra2 = Rohitra2 so, 5 + "5" = 55, and then "55" - 5 string "55" is convert to number 55,Now: 55 - 5 and the answer is 50.
 
-        console.log(typeof(num));
+        console.log(typeof(num));   //number
     </script>
 </body>
 </html>

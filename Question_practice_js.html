@@ -7,7 +7,7 @@
     <title>Javascript Question Practice</title>
 </head>
 
-<body>
+<body style="background-color: black; color: white;">
     <h1>Js Question Practice</h1>
     <!-- <script>
         let num = 5 + "5" - 5;
@@ -48,6 +48,21 @@
         // console.log(print());
         
     </script> -->
+
+    <script>
+        /*  Write a JavaScript program to get the current date.  
+            Expected Output :
+            mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy */
+
+            let Tarikh = new Date();
+            document.write(formatDate(Tarikh));
+            function formatDate(x){
+                let Date = x.getDate();
+                let Month = x.getMonth();
+                let Year = x.getFullYear();
+                return Month + "-" + Date + "-" + Year + "</br>" + Month + "/" + Date + "/" + Year + "</br>" + Date + "-" + Month + "-" + Year + "<br>" + Date + "/" + Month + "/" + Year; 
+            }
+    </script>
 </body>
 
 </html>

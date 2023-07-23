@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Question Practice</title>
 </head>
+
 <body>
     <h1>Js Question Practice</h1>
-    <script>
+    <!-- <script>
         let num = 5 + "5" - 5;
 
         console.log(num);  //50
@@ -15,6 +17,30 @@
         //first 5 + "5" = number + string eg. Rohit + ra2 = Rohitra2 so, 5 + "5" = 55, and then "55" - 5 string "55" is convert to number 55,Now: 55 - 5 and the answer is 50.
 
         console.log(typeof(num));   //number
+    </script> -->
+
+    <script>
+        /* Write a JavaScript program to display the current day and time in the following format.
+            Sample Output : Today is : Tuesday.
+            Current time is : 10 PM : 30 : 38 */
+
+            let Tarikh = new Date();
+            // console.log(Tarikh)
+            console.log("Today is : " + get_day(Tarikh.getDay()));
+            console.log("Current Time is : " + modified_time(Tarikh.getHours())+ " : " + Tarikh.getMinutes() + " : " + Tarikh.getSeconds());
+
+            function get_day(a){
+                let abc = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+                return abc[a];
+            }
+            function modified_time(b){
+                if(b >= 12){
+                    return b + " PM";
+                }else{
+                    return b + " AM";
+                }
+            }
     </script>
 </body>
+
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Duplicate</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [15,45,85,15,21,35,75,94,85,21,45];
+
+        let Goods = {
+            "ch": 1,
+            "Besan": 1,
+            "Atta": 1,
+            "Gehu": 1
+        };
+        
+        // console.log(Goods);
+
+        let arr = ["ch", "Besan", "ch", "Atta", "Besan", "Gehu"];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let k = i + 1; k < arr.length-1; k++) {
+                if (arr[i] == arr[k]) {
+                    Goods[arr[i]] = Goods[arr[i]] + 1;
+                }
+            }
+            if (Goods[arr[i]] ==
+             1) {
+                console.log(Goods[arr[i]], arr[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>

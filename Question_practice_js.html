@@ -49,7 +49,7 @@
         
     </script> -->
 
-    <script>
+    <!-- <script>
         /*  Write a JavaScript program to get the current date.  
             Expected Output :
             mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy */
@@ -62,6 +62,18 @@
                 let Year = x.getFullYear();
                 return Month + "-" + Date + "-" + Year + "</br>" + Month + "/" + Date + "/" + Year + "</br>" + Date + "-" + Month + "-" + Year + "<br>" + Date + "/" + Month + "/" + Year; 
             }
+    </script> -->
+    <script>
+        //Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
+
+        let side1 = 5, side2 = 6, side3 = 7;
+
+        let s = (side1 + side2 + side3)/2;
+        
+        let area = Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+
+        console.log(area)
+
     </script>
 </body>
 

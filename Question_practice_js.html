@@ -79,15 +79,17 @@
     <script>
         let Brilliant_Academy = {
             Class : [1,2,3,4,5,6,7,8,9,10,11,12],
+            Class1 : "Room No 1",
             Board : "MP Board",
             Medium : "English",
             Address : "Shyan Nagar NX, Indore",
             Holidays : ["26th January","15th August","2nd October","14th November","25th December"],
             All_Details : function allDet(){
-                return `Class = ${this.Class} Board = ${this.Board} Medium = ${this.Medium} Address = ${this.Address} Holidays = ${this.Holidays}`
+                    return `Class = ${this.Class} Board = ${this.Board} Medium = ${this.Medium} Address = ${this.Address} Holidays = ${this.Holidays}`
             }
         }
         console.log(Brilliant_Academy.All_Details());
+        console.log(Brilliant_Academy.Class);
     </script>
 </body>
 

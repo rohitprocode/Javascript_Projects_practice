@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Root</title>
+</head>
+<body>
+    <input type="number" id="input1" oninput="sqrt()">
+    <p id="result"></p>
+    <script>
+        function sqrt(){
+        let a = document.getElementById('input1').value;
+        for(let i = 0; i <= a; i++){
+            if((i*i)==a){
+                return document.getElementById('result').innerHTML = `Square root of ${a} = ${i}`;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

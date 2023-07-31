@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        let arr = [2,3,6,6,5,8,8,4,2,7,9,1,2];
+        let arr = [2,3,6,6,5];
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr.length; j++) {
                 if (arr[i] > arr[j]){
@@ -19,9 +19,6 @@
                 }
             }
         }
-        console.log(arr);
-        let n = [...new Set(arr)];
-        console.log(n)
         for(let i = 0; i<arr.length; i++){
             if(arr[i] > arr[i+1]){
                 console.log(arr[i+1]);

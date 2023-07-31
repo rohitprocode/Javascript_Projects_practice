@@ -9,17 +9,17 @@
 
 <body>
     <script>
-        let n = 4;
-        let new_n = [];
-        for (let i = 1; i <= n; i++) {
-            new_n.push(i);
-        }
-        console.log(new_n);
-        let store = 0;
-        for (let j = 0; j < new_n.length; j++) {
-            store = new_n[j] + store;
-        }
-        console.log(store);
+        // let n = 4;
+        // let new_n = [];
+        // for (let i = 1; i <= n; i++) {
+        //     new_n.push(i);
+        // }
+        // console.log(new_n);
+        // let store = 0;
+        // for (let j = 0; j < new_n.length; j++) {
+        //     store = new_n[j] + store;
+        // }
+        // console.log(store);
 
 
 
@@ -36,6 +36,21 @@
         return store;
     }
 } */
+
+
+    function seriesSum(n) {
+        // code here
+        let new_n =[];
+        for(let i = 1; i <= n; i++){
+            new_n.push(i);
+        }
+        let store = 0;
+        for(let j = 0; j < new_n.length; j++){
+            store = new_n[j] + store;
+        }
+        return store;
+    }
+    console.log(seriesSum(5))
     </script>
 </body>
 

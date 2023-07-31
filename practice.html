@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 4;
+        let new_n = [];
+        for (let i = 1; i <= n; i++) {
+            new_n.push(i);
+        }
+        console.log(new_n);1
+        let store = 0;
+        for (let j = 0; j < new_n.length; j++) {
+            store = new_n[j] + store;
+        }
+        console.log(store);
+
+
+
+        /*class Solution {
+            seriesSum(n) {
+        let new_n = [];
+        for (let i = 1; i <= n; i++) {
+            new_n.push(i);
+        }
+        let store = 0;
+        for (let j = 0; j < new_n.length; j++) {
+            store = new_n[j] + store;
+        }
+        return store;
+    }
+} */
+    </script>
+</body>
+
+</html>

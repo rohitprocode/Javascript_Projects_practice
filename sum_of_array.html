@@ -9,12 +9,10 @@
     <script>
         let Array1 = [1,2,3,4,5];
         let store = 0;
-        for(let i = 0; i < Array1.length-2; i++){ 
-            let x = Array1[i] + Array1[i + 1];
-            store = store + x;
-            console.log(store);
+        for(let i = 0; i < Array1.length; i++){ 
+            store = Array1[i] + store;
         }
-
+        console.log(store);
     </script>
 </body>
 </html>

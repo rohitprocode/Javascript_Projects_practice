@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut Promises</title>
+</head>
+<body>
+    <script>
+        let a = Math.random()*10;
+        const Mypromise = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                if(a>5){
+                    resolve("Resolved" + a);
+                }else{
+                    reject("Rejected" + a);
+                }
+            },1000);
+        })
+        Mypromise
+        .then((result)=>{
+            console.log(result);
+        })
+
+        .catch((result)=>{
+            console.log(result);
+        })
+    </script>
+</body>
+</html>

@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>map Method</title>
 </head>
+
 <body>
     <script>
-        let arr1 = [1,2,3,4,5,6,7,8,9,10]; console.log(arr1);
+        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //console.log(arr1);c
 
-        let arr2 = arr1.map(function(value,i){
-            document.write(value + "</br>");  //currentValue
-            document.write(i + "</br>");      //Index No
+        let arr2 = arr1.map(function (value, i) {
+            // document.write(value + "</br>");  //currentValue
+            // document.write(i + "</br>");      //Index No
         });
 
         //Example:
 
         let arr3 = [
-            {price: 39000, product: "Mobile"},
-            {price: 900, product: "Charger"},
-            {price: 500, product: "Earphone"},
-            {price: 80000, product: "Laptop"},
-            {price: 50000, product: "Camera"},
-    ];
+            { price: 39000, product: "Mobile" },
+            { price: 900, product: "Charger" },
+            { price: 500, product: "Earphone" },
+            { price: 80000, product: "Laptop" },
+            { price: 50000, product: "Camera" },
+        ];
 
-    arr3.map(function(value,i){
-        console.log(value);
-        console.log( " i " + i)
-    });
+        let newarray = arr3.map((value,i) => { return value.product + " : " + value.price + " : " + i } );
+
+        console.log(newarray);
 
     </script>
 </body>
+
 </html>

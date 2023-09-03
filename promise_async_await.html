@@ -8,13 +8,13 @@
 <body>
     <script>
         console.log("Start");
-        function getName(name){
+        function getName(name,callback){
             setTimeout(()=>{
                 console.log("Inside SetTimeOut");
-                return name;
+                callback(name);
             },1000)
         }
-        console.log(getName("Rohit"));
+        const nm = getName("Rohit",(nm)=>{console.log(nm)});
         console.log("End");
     </script>
 </body>

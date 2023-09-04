@@ -13,9 +13,17 @@
             setTimeout(()=>{
                 console.log("Inside SetTimeOut");
                 callback(name);
-            },1000)
+            },2000)
         }
-        const nm = getName("Rohit",(nm)=>{console.log(nm)});
+
+        function getHobbies(name,callback){
+            setTimeout(()=>{
+                console.log("Inside Hobbies SetTimeOut");
+                callback(['Cricket','Reading','Dancing']);
+            },2000)
+        }
+
+        const nm = getName("Rohit",(nm)=>{console.log(nm); getHobbies(nm,(hobby)=>{console.log(hobby)});});
         console.log("End");
     </script>
 </body>

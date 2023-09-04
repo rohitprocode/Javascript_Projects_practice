@@ -20,7 +20,7 @@
             setTimeout(()=>{
                 console.log("Inside Hobbies SetTimeOut");
                 callback(['Cricket','Reading','Dancing']);
-            },2000)
+            },1000)
         }
 
         const nm = getName("Rohit",(nm)=>{console.log(nm); getHobbies(nm,(hobby)=>{console.log(hobby)});});

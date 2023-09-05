@@ -9,43 +9,63 @@
 
 <body>
     <script>
-        //Promise Async Await
-        console.log("Start");
+        // //Promise Async Await
+        // console.log("Start");
 
-        //Callback and CallBack Hell
-        function getName(name, callback) {
-            setTimeout(() => {
-                console.log("Inside SetTimeOut");
-                callback(name);
-            }, 2000)
-        }
+        // //Callback and CallBack Hell
+        // function getName(name, callback) {
+        //     setTimeout(() => {
+        //         console.log("Inside SetTimeOut");
+        //         callback(name);
+        //     }, 2000)
+        // }
 
-        function getHobbies(name, callback) {
-            setTimeout(() => {
-                console.log("Inside Hobbies SetTimeOut");
-                callback(['Cricket', 'Reading', 'Dancing']);
-            }, 1000)
-        }
+        // function getHobbies(name, callback) {
+        //     setTimeout(() => {
+        //         console.log("Inside Hobbies SetTimeOut");
+        //         callback(['Cricket', 'Reading', 'Dancing']);
+        //     }, 1000)
+        // }
 
-        const nm = getName("Rohit", (nm) => { console.log(nm); getHobbies(nm, (hobby) => { console.log(hobby) }); });
-        console.log("End");
+        // const nm = getName("Rohit", (nm) => { console.log(nm); getHobbies(nm, (hobby) => { console.log(hobby) }); });
+        // console.log("End");
 
-        //Basic Example
-        const promiseObj = new Promise((resolve, reject) => {
-            let req = true;
+        //Basic Example 1
+        // const promiseObj = new Promise((resolve, reject) => {
+        //     let req = true;
 
-            if (req == true) {
-                // resolve("Request Success");
-                resolve([1,2,3,4,5]);
-            } else {
-                reject("Request Cancelled");
-            }
-        });
+        //     if (req == true) {
+        //         // resolve([1,2,3,4,5]);
+        //         resolve("Request Success");
+        //     } else {
+        //         reject("Request Cancelled");
+        //     }
+        // });
 
-        promiseObj.then(
-            (value) => {console.log(value)},
-            (error) => {console.log(error)}
-        )
+        // promiseObj.then(
+        //     (value) => {console.log(value)},
+        //     (error) => {console.log(error)}
+        // )
+
+
+        //Basic Example 2
+
+        //Also write like this
+        // const promiseObj = new Promise((resolve, reject) => {
+        //     let req = true;
+
+        //     if (req == true) {
+        //         // resolve([1,2,3,4,5]);
+        //         resolve("Request Success");
+        //     } else {
+        //         reject("Request Cancelled");
+        //     }
+        // }).then(
+        //     (value) => {console.log(value)},
+        //     (error) => {console.log(error)}
+        // );
+
+        
     </script>
 </body>
 

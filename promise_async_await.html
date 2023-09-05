@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise Async Await</title>
 </head>
+
 <body>
     <script>
         //Promise Async Await
         console.log("Start");
-        function getName(name,callback){
-            setTimeout(()=>{
+
+        //Callback and CallBack Hell
+        function getName(name, callback) {
+            setTimeout(() => {
                 console.log("Inside SetTimeOut");
                 callback(name);
-            },2000)
+            }, 2000)
         }
 
-        function getHobbies(name,callback){
-            setTimeout(()=>{
+        function getHobbies(name, callback) {
+            setTimeout(() => {
                 console.log("Inside Hobbies SetTimeOut");
-                callback(['Cricket','Reading','Dancing']);
-            },1000)
+                callback(['Cricket', 'Reading', 'Dancing']);
+            }, 1000)
         }
 
-        const nm = getName("Rohit",(nm)=>{console.log(nm); getHobbies(nm,(hobby)=>{console.log(hobby)});});
+        const nm = getName("Rohit", (nm) => { console.log(nm); getHobbies(nm, (hobby) => { console.log(hobby) }); });
         console.log("End");
+
+        //Basic Example
+stats
+        const promiseObj = new Promise((resolve, reject) => {
+            let req = true;
+
+            if (req == true) {
+                resolve("Request Success");
+            } else {
+                reject("Request Cancelled");
+            }
+        });
+
+        promiseObj.then(
+            (value) => {console.log(value)},
+            (error) => {console.log(error)}
+        )
     </script>
 </body>
+
 </html>

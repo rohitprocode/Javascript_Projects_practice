@@ -118,6 +118,35 @@
 
 
          // //Use of Promise
+        // console.log("Start");
+        // //Solution for Callback Hell
+
+        // function getName(name) {
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(() => {
+        //         console.log("Inside SetTimeOut");
+        //         resolve(name);
+        //     }, 2000)
+        // })
+        // }
+
+        // function getHobbies(name) {
+        //     return new Promise((resolve,reject)=>{
+        //     setTimeout(() => {
+        //         console.log("Inside Hobbies SetTimeOut");
+        //         resolve(['Cricket', 'Reading', 'Dancing']);
+        //     }, 1000)
+        // })
+        // }
+
+        // getName("Rohit")
+        // .then(nm => getHobbies(nm))
+        // .then(hobby => console.log(hobby));
+
+        // console.log("End");
+
+        //Use of Async/Await
+
         console.log("Start");
         //Solution for Callback Hell
 
@@ -139,11 +168,15 @@
         })
         }
 
-        getName("Rohit")
-        .then(nm => getHobbies(nm))
-        .then(hobby => console.log(hobby));
-
+        async function showHobby(){
+            let nm = await getName('Rohit');
+            let hobby = await getHobbies(nm);
+            console.log(hobby);
+        }
+        
+        showHobby();
         console.log("End");
+
     </script>
 </body>
 

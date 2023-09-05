@@ -31,6 +31,8 @@
         // console.log("End");
 
         //Basic Example 1
+
+        //Producing Code
         // const promiseObj = new Promise((resolve, reject) => {
         //     let req = true;
 
@@ -42,6 +44,7 @@
         //     }
         // });
 
+        //Consuming Code
         // promiseObj.then(
         //     (value) => {console.log(value)},
         //     (error) => {console.log(error)}
@@ -51,6 +54,7 @@
         //Basic Example 2
 
         //Also write like this
+        //Producing Code and Consuming Code together
         // const promiseObj = new Promise((resolve, reject) => {
         //     let req = true;
 
@@ -65,6 +69,23 @@
         //     (error) => {console.log(error)}
         // );
 
+
+        //Basic Example 3
+
+        const promiseObj = new Promise((resolve,reject)=>{
+            let req = true;
+
+            if(req==true){
+                resolve("Request Success");
+            }else{
+                reject("Request Cancelled");
+            }
+        }).then(
+            (value)=>{console.log(value)}
+        ).catch(
+            (error) => {console.log(error)}
+        );
+            
         
     </script>
 </body>

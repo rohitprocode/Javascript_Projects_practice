@@ -86,17 +86,35 @@
 
         //Basic Example 4
         //then and another then
-        const promiseObj = new Promise((resolve,reject)=>{
-            let num = 10;
-            resolve(num);
-        }).then(
-            (value)=>{console.log(value)
-            return value + 10
-        }
-        ).then(
-            (value)=>{console.log(value)}
-        )
+        // const promiseObj = new Promise((resolve,reject)=>{
+        //     let num = 10;
+        //     resolve(num);
+        // }).then(
+        //     (value)=>{console.log(value)
+        //     return value + 10
+        // }
+        // ).then(
+        //     (value)=>{console.log(value)}
+        // )
         
+
+        //Basic Example
+        //finally()
+
+        const promiseObj = new Promise((resolve,reject)=>{
+            let request = true;
+            if(request==true){
+                resolve("Request Successful");
+            }else{
+                reject("Request Cancelled");
+            }
+        }).then(
+            (value)=>{console.log(value)}
+        ).catch(
+            (error)=>{console.log(error)}
+        ).finally(
+            ()=>{console.log("Cleaned UP")}
+        )
     </script>
 </body>
 

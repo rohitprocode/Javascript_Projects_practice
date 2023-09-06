@@ -41,14 +41,23 @@
     <script>
 
     function expect(val){
-        let toBe = 150;
-        (toBe === val) ? console.log("true") : console.error("Not Equal");
-        let notToBe = 115;
-        (notToBe !== val) ? console.log('true') : console.error("Equal");
+        return{
+            toBe : (v) => {
+                if(v === val ){ return true }
+                else { throw new Error("Not Equal")}
+            }, 
+            notToBe : (v) => {
+                if(v !== val) { return true }
+                else {
+                    throw new Error("Equal");
+                }
+            }
+        }
     }
+1
 
-    expect(115);
-
+console.log(expect(5).toBe(5));
+console.log(expect(5).notToBe(45));
 </script>
 </body>
 

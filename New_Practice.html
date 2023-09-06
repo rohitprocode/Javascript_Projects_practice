@@ -42,17 +42,9 @@
 
     function expect(val){
         let toBe = 150;
-        if(toBe === val){
-            console.log("true");
-        }else{
-            console.error("Not Equal");
-        }
+        (toBe === val) ? console.log("true") : console.error("Not Equal");
         let notToBe = 115;
-        if(notToBe !== val){
-            console.log('true');
-        }else{
-            console.error("Equal")
-        }
+        (notToBe !== val) ? console.log('true') : console.error("Equal");
     }
 
     expect(115);

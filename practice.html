@@ -2,91 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        // let n = 4;
-        // let new_n = [];
-        // for (let i = 1; i <= n; i++) {
-        //     new_n.push(i);
-        // }
-        // console.log(new_n);
-        // let store = 0;
-        // for (let j = 0; j < new_n.length; j++) {
-        //     store = new_n[j] + store;
-        // }
-        // console.log(store);
+  <script>
+    // let n = 4;
+    // let new_n = [];
+    // for (let i = 1; i <= n; i++) {
+    //     new_n.push(i);
+    // }
+    // console.log(new_n);
+    // let store = 0;
+    // for (let j = 0; j < new_n.length; j++) {
+    //     store = new_n[j] + store;
+    // }
+    // console.log(store);
 
 
 
-        /*class Solution {
-            seriesSum(n) {
-        let new_n = [];
-        for (let i = 1; i <= n; i++) {
-            new_n.push(i);
-        }
-        let store = 0;
-        for (let j = 0; j < new_n.length; j++) {
-            store = new_n[j] + store;
-        }
-        return store;
+    /*class Solution {
+        seriesSum(n) {
+    let new_n = [];
+    for (let i = 1; i <= n; i++) {
+        new_n.push(i);
     }
+    let store = 0;
+    for (let j = 0; j < new_n.length; j++) {
+        store = new_n[j] + store;
+    }
+    return store;
+}
 } */
 
 
-        // function seriesSum(n) {
-        //     // code here
-        //     let new_n =[];
-        //     for(let i = 1; i <= n; i++){
-        //         new_n.push(i);
-        //     }
-        //     let store = 0;
-        //     for(let j = 0; j < new_n.length; j++){
-        //         store = new_n[j] + store;
-        //     }
-        //     return store;
-        // }
-        // console.log(seriesSum(5))
+    // function seriesSum(n) {
+    //     // code here
+    //     let new_n =[];
+    //     for(let i = 1; i <= n; i++){
+    //         new_n.push(i);
+    //     }
+    //     let store = 0;
+    //     for(let j = 0; j < new_n.length; j++){
+    //         store = new_n[j] + store;
+    //     }
+    //     return store;
+    // }
+    // console.log(seriesSum(5))
 
 
 
-        let count = 0;
+    //         let count = 0;
 
-function cc(card) {
-  // Only change code below this line
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      count++;
-      break;
-    case 10:
-    case "J":
-    case "Q":
-    case "K":
-    case "A":
-      count--;
-      break;
-  }
-  if (count > 0) {
-    console.log( count + " Bet");
-  } else {
-    return count + " Hold";
-  }
-  // Only change code above this line
-}
+    // function cc(card) {
+    //   // Only change code below this line
+    //   switch (card) {
+    //     case 2:
+    //     case 3:
+    //     case 4:
+    //     case 5:
+    //     case 6:
+    //       count++;
+    //       break;
+    //     case 10:
+    //     case "J":
+    //     case "Q":
+    //     case "K":
+    //     case "A":
+    //       count--;
+    //       break;
+    //   }
+    //   if (count > 0) {
+    //     console.log( count + " Bet");
+    //   } else {
+    //     return count + " Hold";
+    //   }
+    //   // Only change code above this line
+    // }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+    // cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 
 
-    </script>
+    // Setup
+    function phoneticLookup(val) {
+      let result = "";
+
+      // Only change code below this line
+      // switch (val) {
+      //   case "alpha":
+      //     result = "Adams";
+      //     break;
+      //   case "bravo":
+      //     result = "Boston";
+      //     break;
+      //   case "charlie":
+      //     result = "Chicago";
+      //     break;
+      //   case "delta":
+      //     result = "Denver";
+      //     break;
+      //   case "echo":
+      //     result = "Easy";
+      //     break;
+      //   case "foxtrot":
+      //     result = "Frank";
+      // }
+        
+         let lookup = {
+        "alpha": "Adams",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+      }
+      result = lookup[val];
+      // Only change code above this line
+      return result;
+    }
+
+    console.log(phoneticLookup("charlie"));
+
+  </script>
 
 
 </body>

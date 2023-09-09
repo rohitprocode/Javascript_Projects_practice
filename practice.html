@@ -38,20 +38,57 @@
 } */
 
 
-    function seriesSum(n) {
-        // code here
-        let new_n =[];
-        for(let i = 1; i <= n; i++){
-            new_n.push(i);
-        }
-        let store = 0;
-        for(let j = 0; j < new_n.length; j++){
-            store = new_n[j] + store;
-        }
-        return store;
-    }
-    console.log(seriesSum(5))
+        // function seriesSum(n) {
+        //     // code here
+        //     let new_n =[];
+        //     for(let i = 1; i <= n; i++){
+        //         new_n.push(i);
+        //     }
+        //     let store = 0;
+        //     for(let j = 0; j < new_n.length; j++){
+        //         store = new_n[j] + store;
+        //     }
+        //     return store;
+        // }
+        // console.log(seriesSum(5))
+
+
+
+        let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  if (count > 0) {
+    console.log( count + " Bet");
+  } else {
+    return count + " Hold";
+  }
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+
     </script>
+
+
 </body>
 
 </html>

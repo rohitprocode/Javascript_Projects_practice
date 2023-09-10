@@ -87,8 +87,8 @@
 
 
     // Setup
-    function phoneticLookup(val) {
-      let result = "";
+    // function phoneticLookup(val) {
+    //   let result = "";
 
       // Only change code below this line
       // switch (val) {
@@ -111,20 +111,46 @@
       //     result = "Frank";
       // }
         
-         let lookup = {
-        "alpha": "Adams",
-        "charlie": "Chicago",
-        "delta": "Denver",
-        "echo": "Easy",
-        "foxtrot": "Frank"
-      }
-      result = lookup[val];
-      // Only change code above this line
-      return result;
+    //      let lookup = {
+    //     "alpha": "Adams",
+    //     "charlie": "Chicago",
+    //     "delta": "Denver",
+    //     "echo": "Easy",
+    //     "foxtrot": "Frank"
+    //   }
+    //   result = lookup[val];
+    //   // Only change code above this line
+    //   return result;
+    // }
+
+    // console.log(phoneticLookup("charlie"));
+
+    // function checkObj(obj,checkProp){
+    //   if(obj.hasOwnProperty(checkProp)==true){
+    //     return obj[checkProp];
+    //   }else{
+    //     return "Not Found";
+    //   }
+    // }
+
+    // console.log(checkObj({top:"hat",bottom:"Pants"},'top'));
+
+//Given an integer array nums, a reducer function fn, and an initial value init, return a reduced array.
+
+// A reduced array is created by applying the following operation: val = fn(init, nums[0]), val = fn(val, nums[1]), val = fn(val, nums[2]), ... until every element in the array has been processed. The final value of val is returned.
+
+// If the length of the array is 0, it should return init.
+
+// Please solve it without using the built-in Array.reduce method.
+
+    var reduce = function(nums, fn, init) {
+      let val = init;      // initial value is 0
+    for(let i = 0; i < nums.length; i++){
+      val = fn(val,nums[i])     //val = fn(0,[1,2,3,4])
     }
-
-    console.log(phoneticLookup("charlie"));
-
+    return val;
+};
+console.log(reduce([1,2,3,4],function sum(accum, curr) { return accum + curr; },0))
   </script>
 
 

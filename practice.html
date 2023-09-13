@@ -166,7 +166,7 @@
 console.log( checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift"));
 </script>
  -->
-
+<!-- 
 <script>
 
 // Setup
@@ -194,19 +194,19 @@ const recordCollection = {
 function updateRecords(records, id, prop, value) {
   if(value==""){
     delete records[id][prop];
-  }else if((prop != "tracks" ) && (value != "")){
-    records[id][prop] = value;
-  }else if((prop === "tracks") && (value != "")){
+  }else if((prop.tracks == undefined ) && (value != "")){
+    value = records[id][prop];
+  }else if((prop.tracks != undefined) && (value != "")){
     if(records[id].hasOwnProperty("tracks") === false){
       records[id][prop] = [];
     }
-    records[id][prop].push(value);
+    records[id][prop].push(value)
   }
   return records;
 }
 
-console.log(updateRecords(recordCollection, 5439, 'artist', ''));
-
+console.log(updateRecords(recordCollection, 5439, 'artist', '')); -->
+<!-- 
 // The updateRecords function takes 4 arguments represented by the following function parameters:
 
 // records - an object containing several individual albums
@@ -224,8 +224,36 @@ console.log(updateRecords(recordCollection, 5439, 'artist', ''));
 
 
 </script>
+ -->
+<script>
+function multiplyAll(arr) {
+  // let product = 1;
+  // Only change code below this line
+  let temp = 1;
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j <= arr[i].length-1; j++){
+      // console.log(temp);
+      temp = temp * arr[i][j];
+    }
+  }
+  
+  // Only change code above this line
+  return temp;
+}
+
+console.log(multiplyAll([[1,2], [3,4], [5,6,7]]));
 
 
+// const arr = [
+//   [1, 2], [3, 4], [5, 6]
+// ];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     console.log(arr[i][j]);
+//   }
+// }
+</script>
 </body>
 
 </html>

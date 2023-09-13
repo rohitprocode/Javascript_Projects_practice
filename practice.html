@@ -143,15 +143,31 @@
 
 // Please solve it without using the built-in Array.reduce method.
 
-    var reduce = function(nums, fn, init) {
-      let val = init;      // initial value is 0
-    for(let i = 0; i < nums.length; i++){
-      val = fn(val,nums[i])     //val = fn(0,[1,2,3,4])
-    }
-    return val;
-};
-console.log(reduce([1,2,3,4],function sum(accum, curr) { return accum + curr; },0))
-  </script>
+//     var reduce = function(nums, fn, init) {
+//       let val = init;      // initial value is 0
+//     for(let i = 0; i < nums.length; i++){
+//       val = fn(val,nums[i])     //val = fn(0,[1,2,3,4])
+//     }
+//     return val;
+// };
+// console.log(reduce([1,2,3,4],function sum(accum, curr) { return accum + curr; },0))
+//   </script>
+
+
+<script>
+  function checkObj(obj, checkProp) {
+  // Only change code below this line
+  let data = obj;
+  return obj.hasOwnProperty(checkProp)?obj[checkProp]:"Not Found";
+  // Only change code above this line
+}
+
+
+console.log( checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift"));
+</script>
+
+
+
 
 
 </body>

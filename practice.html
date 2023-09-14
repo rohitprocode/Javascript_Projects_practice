@@ -139,9 +139,7 @@
 
 // A reduced array is created by applying the following operation: val = fn(init, nums[0]), val = fn(val, nums[1]), val = fn(val, nums[2]), ... until every element in the array has been processed. The final value of val is returned.
 
-// If the length of the array is 0, it should return init.
-
-// Please solve it without using the built-in Array.reduce method.
+// If the length of the array is 0, it / Please solve it without using the built-in Array.reduce method.
 
 //     var reduce = function(nums, fn, init) {
 //       let val = init;      // initial value is 0
@@ -219,7 +217,7 @@ console.log(updateRecords(recordCollection, 5439, 'artist', '')); -->
 // If value is an empty string, delete the given prop property from the album.
 // If prop isn't tracks and value isn't an empty string, assign the value to that album's prop.
 // If prop is tracks and value isn't an empty string, you need to update the album's tracks array. First, if the album does not have a tracks property, assign it an empty array. Then add the value as the last item in the album's tracks array.
-// Note: A copy of the recordCollection object is used for the tests. You should not directly modify the recordCollection object.
+// Note: A copy of the recordCollection object is used for the tests. You dify the recordCollection object.
 
 
 
@@ -254,7 +252,7 @@ console.log(multiplyAll([[1,2], [3,4], [5,6,7]])); -->
 //   }
 // }
 </script> -->
-<script>
+<!-- <script>
   function sum(arr, n) {
   // Only change code below this line
   if(n <= 0){
@@ -267,7 +265,80 @@ console.log(multiplyAll([[1,2], [3,4], [5,6,7]])); -->
 console.log(sum([1], 0)) ;
 console.log(sum([2, 3, 4], 1)) ;
 console.log(sum([2, 3, 4, 5], 3)) ;
+</script> -->
+
+
+<script>
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for(let i = 0; i < contacts.length; i++){
+    if((contacts[i].firstName == name)){
+      if(contacts[i][prop] != undefined){
+        return contacts[i][prop];
+      }else{
+        return "No such property";
+      }
+    }
+    if(i == contacts.length-1){
+      return "No such contact";
+    }
+  }
+  // Only change code above this line
+}
+
+console.log(lookUpProfile("Kristian", "lastName"))
+console.log(lookUpProfile("Sherlock", "likes"))
+console.log(lookUpProfile("Harry", "likes"))
+console.log(lookUpProfile("Bob", "number"))
+console.log(lookUpProfile("Bob", "potato"))
+console.log(lookUpProfile("Akira", "address"))
+
 </script>
+<!-- Profile Lookup
+We have an array of objects representing different people in our contacts lists.
+
+A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
+
+The function s an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return the string No such contact.
+
+If prop does not correspond to any valid properties of a contact found to match name then return the string No such property. -->
+
+
+
+
+
 </body>
 
 </html>

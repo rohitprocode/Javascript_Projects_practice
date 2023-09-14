@@ -225,7 +225,7 @@ console.log(updateRecords(recordCollection, 5439, 'artist', '')); -->
 
 </script>
  -->
-<script>
+<!-- <script>
 function multiplyAll(arr) {
   // let product = 1;
   // Only change code below this line
@@ -241,9 +241,9 @@ function multiplyAll(arr) {
   return temp;
 }
 
-console.log(multiplyAll([[1,2], [3,4], [5,6,7]]));
+console.log(multiplyAll([[1,2], [3,4], [5,6,7]])); -->
 
-
+<!-- 
 // const arr = [
 //   [1, 2], [3, 4], [5, 6]
 // ];
@@ -253,6 +253,20 @@ console.log(multiplyAll([[1,2], [3,4], [5,6,7]]));
 //     console.log(arr[i][j]);
 //   }
 // }
+</script> -->
+<script>
+  function sum(arr, n) {
+  // Only change code below this line
+  if(n <= 0){
+    return 0;
+  }else{
+    return sum(arr, n-1) +  arr[n - 1];
+  } 
+}
+
+console.log(sum([1], 0)) ;
+console.log(sum([2, 3, 4], 1)) ;
+console.log(sum([2, 3, 4, 5], 3)) ;
 </script>
 </body>
 

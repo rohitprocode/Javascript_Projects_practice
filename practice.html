@@ -453,12 +453,36 @@ const HIGH_TEMPERATURES = {
 const { yesterday, today } = HIGH_TEMPERATURES;
 console.log(yesterday, today) ;
 </script> -->
-<script>
+<!-- <script>
   const user = { name : "Rohit " , age : 34};
 
   const { name : userName, age: threeFour} = user;
 
   console.log(userName , threeFour)
+</script> -->
+<!-- 
+<script>
+  const user = {
+    johnDoe : {
+      age : 45,
+      email : 'ab@gmail.com'
+    }
+  }
+
+  const { johnDoe : {age,email}} = user;
+  const { johnDoe : {age : johnDoe_Age,email : johnDoe_Email}} = user;
+
+  console.log(johnDoe_Email)
+</script> -->
+
+<script>
+ function removeFirstTwo(list) {
+    const [,,...c] = list
+    console.log(c)
+}
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
 </script>
 </body>
 

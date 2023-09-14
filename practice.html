@@ -426,7 +426,7 @@ console.log(rangeOfNumbers(4, 4))
 
 </script> -->
 
-<script>
+<!-- <script>
   const sum = (...args) => {
   let total = 0;
   for (let i = 0; i < args.length; i++) {
@@ -436,6 +436,29 @@ console.log(rangeOfNumbers(4, 4))
 }
 
 console.log(sum(0,1,2));
+</script> -->
+
+<!-- <script>
+  //Destructuring
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+
+// const { today , tomorrow } = HIGH_TEMPERATURES;
+
+const { yesterday, today } = HIGH_TEMPERATURES;
+console.log(yesterday, today) ;
+</script> -->
+<script>
+  const user = { name : "Rohit " , age : 34};
+
+  const { name : userName, age: threeFour} = user;
+
+  console.log(userName , threeFour)
 </script>
 </body>
 

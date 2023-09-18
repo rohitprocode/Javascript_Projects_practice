@@ -579,6 +579,17 @@ const failuresList = console.log(makeList(result.failure));
 
 // In other words, you are abstracting implementation details from the user. -->
 <!-- </script> -->
+
+<input type="text" placeholder="Enter" id="hh">
+<button onclick="abc()" >Click</button>
+<p id="disp">
+</p>
+<script>
+  let a = document.getElementById('hh').value ;
+  function abc(){
+    document.getElementById('disp').innerText = a;
+  }
+</script>
 </body>
 
 </html>

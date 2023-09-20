@@ -33,18 +33,27 @@
 
         let A = new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                resolve("Kuch to gadbad hai");
-                reject("Kuch to gadbad hai");
+                resolve("Resolve ");
+                reject("Reject ");
             },1500)
         }) 
 
+        let B = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Resolve ");
+                // reject("Reject ");
+            },4000)
+        }) 
+
         A.then(data=>{
-            console.log(data)
-            return data;
+            console.log("First then")
+            return B;
         }).then((data)=>{
-            console.log("Daya Darwaja tod do")
+            console.log("Second then");
         }).catch(data=>{
-            console.log(data);
+            console.log("Catch");
+        }).finally(()=>{
+            console.log("Completed Promises")
         })
 
         console.log("End")
